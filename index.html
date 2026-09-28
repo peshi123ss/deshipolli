@@ -1,87 +1,345 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeshiPolli.com - 域名出售</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            width: 90%;
-            max-width: 700px;
-            background: #fff;
-            padding: 60px 30px;
-            text-align: center;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-        .domain {
-            font-size: 42px;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 25px;
-        }
-        .title {
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-        .description {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        .contact {
-            display: inline-block;
-            padding: 14px 28px;
-            background: #111;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 17px;
-            transition: 0.2s;
-        }
-        .contact:hover {
-            background: #333;
-            transform: translateY(-2px);
-        }
-        .footer {
-            margin-top: 35px;
-            font-size: 14px;
-            color: #999;
-        }
-        @media (max-width: 600px) {
-            .domain { font-size: 30px; }
-            .title { font-size: 24px; }
-            .description { font-size: 16px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeshiPolli.com - 域名出售</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #008080;
+    color: #000;
+    font-family: "宋体", SimSun, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    border: 4px ridge #c0c0c0;
+}
+
+/* TOP */
+.top {
+    background: #000080;
+    color: #fff;
+    height: 58px;
+    padding: 7px 12px;
+    border-bottom: 3px ridge #c0c0c0;
+}
+
+.top-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.top-sub {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #ffff00;
+}
+
+/* MENU */
+.menu {
+    background: #c0c0c0;
+    border-bottom: 3px outset #fff;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu a {
+    color: #0000ee;
+    text-decoration: underline;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* DOMAIN */
+.domain-box {
+    background: #ffff00;
+    border: 3px double #ff0000;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.domain {
+    font-family: "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 2px 2px #808000;
+}
+
+.sale {
+    display: inline-block;
+    margin-top: 5px;
+    background: #ff0000;
+    color: #ffff00;
+    padding: 5px 18px;
+    font-size: 17px;
+    font-weight: bold;
+    border: 3px outset #ff8080;
+}
+
+/* CONTENT */
+.section {
+    margin: 8px;
+    border: 2px solid #808080;
+    background: #fff;
+}
+
+.section-title {
+    background: #000080;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-bottom: 2px ridge #c0c0c0;
+}
+
+.section-content {
+    padding: 7px 10px;
+    line-height: 1.65;
+}
+
+.section-content a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.green {
+    color: #008000;
+}
+
+/* OLD WEB NOTICE */
+.notice {
+    background: #ffffcc;
+    border: 2px dashed #ff0000;
+    padding: 7px;
+    margin: 8px;
+    color: #800000;
+    font-weight: bold;
+}
+
+/* FAKE IMAGE */
+.fake-image {
+    margin: 8px;
+    height: 90px;
+    border: 4px ridge #808080;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #008000 0px,
+            #008000 8px,
+            #00ff00 9px,
+            #00ff00 12px
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff00;
+    font-family: "Courier New", monospace;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+}
+
+/* BUY */
+.buy-area {
+    text-align: center;
+    background: #c0c0c0;
+    border-top: 3px ridge #fff;
+    border-bottom: 3px ridge #808080;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #ff0000;
+    color: #ffff00;
+    padding: 8px 30px;
+    border: 4px outset #ff8080;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.buy-button:active {
+    border-style: inset;
+}
+
+/* FOOTER */
+.footer {
+    background: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    border-top: 3px ridge #c0c0c0;
+}
+
+.footer a {
+    color: #ffff00;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* MARQUEE */
+.marquee {
+    background: #000;
+    color: #00ff00;
+    padding: 4px;
+    border-bottom: 2px solid #ff0000;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee span {
+    display: inline-block;
+    animation: move 12s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .domain {
+        font-size: 28px;
+    }
+
+    .top-title {
+        font-size: 18px;
+    }
+
+    .menu a {
+        margin-right: 10px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="domain">deshipolli.com</div>
-        <div class="title">此域名正在出售</div>
-        <div class="description">
-            这个优质域名正在出售。<br>
-            如果您对购买此域名感兴趣，请点击下方按钮。
-        </div>
-        <a
-            href="https://www.namecheap.com/domains/registration/results/?domain=deshipolli.com"
-            class="contact"
-            target="_blank"
-            rel="noopener noreferrer"
-        >立即购买</a>
-        <div class="footer">域名所有者 · 欢迎咨询</div>
+
+<div class="wrapper">
+
+    <div class="top">
+        <div class="top-title">★ 网络信息中心 ★</div>
+        <div class="top-sub">欢迎光临本站！互联网域名信息发布中心</div>
     </div>
+
+    <div class="menu">
+        <a href="#">首页</a>
+        <a href="#">最新资讯</a>
+        <a href="#">网络资源</a>
+        <a href="#">域名信息</a>
+        <a href="#">网站公告</a>
+    </div>
+
+    <div class="marquee">
+        <span>★★★ 重要消息：DeshiPolli.com 域名正在出售，欢迎查看并购买！ ★★★</span>
+    </div>
+
+    <div class="domain-box">
+        <div class="domain">DeshiPolli.com</div>
+        <div class="sale">★★★ 此域名正在出售 ★★★</div>
+    </div>
+
+    <div class="notice">
+        【温馨提示】本站域名信息正在更新中，如您对该域名感兴趣，可通过下方购买入口进行购买。
+    </div>
+
+    <div class="section">
+        <div class="section-title">【 今日关注 】</div>
+        <div class="section-content">
+            <div>◆ 网络域名资源持续受到关注</div>
+            <div>◆ 简短易记的域名更方便网站建设</div>
+            <div>◆ DeshiPolli.com 正在出售中</div>
+            <div class="red">更新时间：2026-09-28</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">【 热门资讯 】</div>
+        <div class="section-content">
+            <div><a href="#">→ 网站建设与域名选择信息</a></div>
+            <div><a href="#">→ 网络资源最新动态</a></div>
+            <div><a href="#">→ .COM 国际域名相关信息</a></div>
+            <div><a href="#">→ 互联网创业资源推荐</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">【 域名动态 】</div>
+        <div class="section-content">
+            <div>域名：<span class="red">DeshiPolli.com</span></div>
+            <div>后缀：<span class="blue">.COM</span></div>
+            <div>状态：<span class="red">正在出售</span></div>
+            <div>适用：网站 / 品牌 / 商业项目 / 网络平台</div>
+            <div>特点：简短、容易记忆、方便推广</div>
+        </div>
+    </div>
+
+    <div class="fake-image">
+        ★ WELCOME ★
+    </div>
+
+    <div class="section">
+        <div class="section-title">【 网站公告 】</div>
+        <div class="section-content">
+            本页面用于展示及出售 DeshiPolli.com 域名。<br>
+            如果您需要该域名，可以点击下面的购买入口。
+            <br><br>
+            <span class="green">★★ 感谢您访问本站 ★★</span>
+        </div>
+    </div>
+
+    <div class="buy-area">
+        <a class="buy-button"
+           href="https://www.namecheap.com/domains/registration/results/?domain=deshipolli.com"
+           target="_blank">
+            【 立即购买 】
+        </a>
+    </div>
+
+    <div class="footer">
+        DeshiPolli.com　版权所有 © 2026
+        <br><br>
+        <a href="https://www.namecheap.com/domains/registration/results/?domain=deshipolli.com"
+           target="_blank">
+            You can buy this domain here.
+        </a>
+        <br><br>
+        感谢您的访问！
+    </div>
+
+</div>
+
 </body>
 </html>
